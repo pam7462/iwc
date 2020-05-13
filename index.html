@@ -22,20 +22,24 @@
   
   <style>
     /* skip style */
-    .skip{
+    .skip>a{
       position:absolute;
       left:0;
       top:0;
       z-index:999999;
-      display:flex;
-      flex-flow:column;
-    }
-    .skip>a{
-      padding:6px;
+      padding:6px 0;
+      width:220px;
+      text-align:center;
       background-color:black;
       text-decoration:none;     
       font-weight:bold;
       font-size:16px;
+      color:#ffffff;
+      transform:translateY(-100%);
+      transition:0.3s;
+    }
+    .skip>a.active{
+      transform:translateY(0%);
       color:#b19c5e;
     }
 
@@ -46,5 +50,16 @@
     <a href="#">HEADER.SKIPLINKTEXT</a>
     <a href="#">HEADER.SKIPLINKMENU</a>
   </div>
+  <script>
+    $(function(){
+      $('.skip>a').focus(function(){
+        $('.skip>a').removeClass('active');
+        $(this).addClass('active');
+      });
+      $('.skip>a').focusout(function(){
+        $('.skip>a').removeClass('active');
+      });
+    })
+  </script>
 </body>
 </html>
