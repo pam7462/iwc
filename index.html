@@ -20,8 +20,31 @@
   <script src="js/jquery-3.5.0.min.js"></script>
   <title>스위스 럭셔리 시계 | IWC 샤프하우젠</title>
   
+  <style>
+    /* skip style */
+    .skip{
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:999999;
+      display:flex;
+      flex-flow:column;
+    }
+    .skip>a{
+      padding:6px;
+      background-color:black;
+      text-decoration:none;     
+      font-weight:bold;
+      font-size:16px;
+      color:#b19c5e;
+    }
+
+  </style>
 </head>
 <body>
-  
+  <div class="skip">
+    <a href="#">HEADER.SKIPLINKTEXT</a>
+    <a href="#">HEADER.SKIPLINKMENU</a>
+  </div>
 </body>
 </html>
