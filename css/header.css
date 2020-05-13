@@ -1,0 +1,12 @@
+@charset 'utf-8';
+
+.header>.content{
+  width:93.28125%;
+  max-width:1194px;
+  height:80px; 
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-between;
+  align-items:center;
+  background-color:#ffffff;
+}
