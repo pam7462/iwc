@@ -23,3 +23,9 @@
 .logo img{
   width:120px;  
 }
+.header_icons img{
+  width:20px;
+}
+.header_icons img:nth-child(2){
+  display:none;
+}
