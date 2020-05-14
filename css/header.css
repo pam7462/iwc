@@ -203,7 +203,8 @@
   position: absolute;
   right:0;
   top:100%;
-  width:300px;  
+  width:300px; 
+  display:none; 
 }
 .lang_box>.tri{
   display:flex;
@@ -259,7 +260,7 @@
 }
 .lang_container>ul{
   margin:10px 0;
-  overflow:scroll;
+  overflow-y:scroll;
   display:none;
 }
 .lang_container>ul>li{
@@ -273,4 +274,12 @@
 }
 .lang_container>ul.national{
   height:200px;
+}
+
+.rotate_sim{
+  display:inline-block;
+  transition:0.3s;
+}
+.rotate_sim.active{
+  transform:rotate(180deg);
 }

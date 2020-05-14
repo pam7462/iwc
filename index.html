@@ -158,7 +158,7 @@
             <li id="lang_btn">
               <a href="#" onclick="return false;">
                 KR
-                <span>^</span>
+                <span class="rotate_sim">^</span>
               </a>
               <div class="lang_box">
                 <ul class="tri">
@@ -188,7 +188,6 @@
                     <li><a href="#">파라과이</a></li>
                     <li><a href="#">홍콩</a></li>
                   </ul>
-                  <p></p>
                   <h4>언어 선택</h4>
                   <ul class="lang">
                     <li><a href="#">영어</a></li>
@@ -199,9 +198,26 @@
                     <li><a href="#">프랑스어</a></li>
                     <li><a href="#">스페인어</a></li>
                   </ul>
-                  <p></p>
                 </div>
               </div>
+              <!-- start lang box event -->
+              <script>
+                $(function(){
+                  $('.lang_container>h4').click(function(){
+                    $(this).next().slideToggle(100);
+                  });
+                  $('.lang_container>ul>li').click(function(){
+                    var natLang=$(this).children().text();
+                    $(this).parent().prev().text(natLang);
+                    $(this).parent().slideUp(100);
+                  });
+                  $('#lang_btn').click(function(){
+                    $('.lang_box').toggle();
+                    $('.rotate_sim').toggleClass('active');
+                  });
+                })
+              </script>
+              <!-- end lang box event -->
             </li>
           </ul>
         </div>
