@@ -105,7 +105,7 @@
 }
 .iwc_join{
   width:40%;
-  margin:0 auto;
+  margin:20px auto;
   padding:20px;  
   background:#ffffff;
 }
@@ -149,5 +149,28 @@
 }
 .iwc_join>div>input.active{
   border-bottom:1px solid #000000;
+}
+.iwc_join>p{
+  text-align:center;
+  margin:20px 0;
+}
+.iwc_join>p>a:hover{
+  color:#b19c5e;
+  text-decoration:underline;
+}
+.iwc_join>input{
+  display:block;
+  margin:20px auto;
+  border:1px solid #000000;
+  padding:10px 60px;
+  outline:none;
+  cursor: pointer;
+  color:#000000;
+  background-color:#ffffff;  
+  transition:0.3s;
+}
+.iwc_join>input:hover{
+  color:#ffffff;
+  background-color:#000000; 
 }
 
