@@ -60,6 +60,10 @@
   flex-flow:row nowrap;
   justify-content:space-between;
   align-items:center;
+  display:none;
+}
+.search_form>input:first-child{
+  outline:none;
 }
 .search_form>input:first-child,.search_form>input:last-child{
   width:70%;
