@@ -23,11 +23,10 @@
 .nav .submenu{
   position:absolute;
   left:0;
-  top:-600%;
+  bottom:100%;
   width:100%;
   background-color:transparent;
   transition:0.5s;
-
 }
 .submenu_list{
   display:flex;

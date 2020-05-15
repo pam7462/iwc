@@ -27,20 +27,98 @@
   <link rel="stylesheet" href="css/skip.css">
   <link rel="stylesheet" href="css/header.css">
   
+  <!-- start submenu event -->
   <script>
     $(function(){
       $('#submenu_btn').click(function(){
-        var topVal=$('.submenu').css('top');
-        if(topVal=='80px'){
-          $('.submenu').css('top','-600%').css('background-color','transparent');
+        var submenuHeight=$('.submenu').height();
+        // console.log(submenuHeight);
+        var submenuBottom=$('.submenu').css('bottom');
+        // console.log(submenuBottom);
+        if(submenuBottom=='80px'){
+          $('.submenu').css('bottom','-'+submenuHeight+'px');
         }else{
-          $('.submenu').css('top','100%').css('background-color','#ffffff');
-
+          $('.submenu').css('bottom','100%');
         }
       });
     })
   </script>
+  <!-- end submenu event -->
+
+  <!-- start search event -->
+  <script>
+    $(function(){
+      $('#search_btn').click(function(){
+        var tmp=$('.search_form').css('display');
+        if(tmp=='none'){
+          $('.search_form').css('display','flex');
+          $('#search01').focus();
+        }else if(tmp=='flex'){
+          $('.search_form').css('display','none');
+          $('#search01').blur();
+        }
+      });
+    })
+  </script>
+  <!-- end search event -->
  
+  <!-- start login form event -->
+  <script>
+    $(function(){
+      $('#login_open_btn').click(function(){
+        $('.login_form').show();
+        $('#user_id').focus();
+      });
+      $('#login_close_btn').click(function(){
+        $('.login_form').hide();
+      });
+      $('.iwc_join>ul>li').click(function(){
+        $('.iwc_join>ul>li').removeClass('active');
+        $(this).addClass('active');
+      });
+      $('.iwc_join>div>input').focus(function(){
+        $('.iwc_join>div>input').prev().removeClass('active');
+        $(this).prev().addClass('active');
+      });
+      $('.iwc_join>div>input').focusout(function(){
+        $('.iwc_join>div>input').prev().removeClass('active');
+      })
+      $('input[value="LOG IN"]').click(function(){
+        var userId=$('#user_id').val();
+        console.log(userId);
+        var userPass=$('#user_pass').val();
+        console.log(userPass);
+        if(userId=='' || userPass==''){
+          $('.iwc_join>div>input').css('border-bottom-color','red');
+          $('.iwc_join>div>label').css('color','red');
+          $('.iwc_join>div').addClass('active');
+          $('#user_id').focus();
+        }                  
+      });
+    })
+  </script>
+  <!-- end login form event -->
+
+  <!-- start lang box event -->
+  <script>
+    $(function(){
+      $('.lang_container>h4').click(function(){
+        $(this).next().slideToggle(100);
+      });
+      $('.lang_container>ul>li').click(function(){
+        var natLang=$(this).children().text();
+        $(this).parent().prev().text(natLang);
+        $(this).parent().slideUp(100);
+      });
+      $('#lang_btn').click(function(){
+        $('.lang_box').toggle();
+        $('.rotate_sim').toggleClass('active');
+      });
+    })
+  </script>
+  <!-- end lang box event -->
+  
+  
 </head>
 <body>
   <div class="wrap">
@@ -52,8 +130,8 @@
       <div class="content1">
         <nav class="nav">
           <ul>
-            <li id="submenu_btn">
-              <a href="#" onclick="return false;">메뉴</a>
+            <li>
+              <a id="submenu_btn" href="#" onclick="return false;">메뉴</a>
               <div class="submenu">
                 <div class="content1">
                   <ul class="submenu_list">
@@ -122,7 +200,87 @@
                 </div>
               </div>
             </li>
-            <li id="clock_btn"><a href="#" onclick="return false;">시계</a></li>
+            <li>
+              <a id="clock_btn" href="#" onclick="return false;">시계</a>
+              <ul>
+                <li class="collection">
+                  <div class="coll_tit">
+                    <h4>컬랙션 살펴보기</h4>
+                    <p>
+                      <a href="#">IWC 컬렉션 소개</a>
+                    </p>
+                  </div>
+                  <div class="coll_content">
+                    <div class="watches">
+                      <img src="images/watches01.webp" alt="watches01">
+                      <p>
+                        <a href="#">
+                          파일럿워치<br>
+                          <span>36시계</span>
+                        </a>
+                      </p>
+                    </div>
+                    <div class="watches">
+                      <img src="images/watches02.webp" alt="watches02">
+                      <p>
+                        <a href="#">
+                          포르투기저<br>
+                          <span>57시계</span>
+                        </a>
+                      </p>
+                    </div>
+                    <div class="watches">
+                      <img src="images/watches03.webp" alt="watches03">
+                      <p>
+                        <a href="#">
+                          포르투기저<br>
+                          <span>46시계</span>
+                        </a>
+                      </p>
+                    </div>
+                    <div class="watches">
+                      <img src="images/watches04.webp" alt="watches04">
+                      <p>
+                        <a href="#">
+                          다빈치<br>
+                          <span>16시계</span>
+                        </a>
+                      </p>
+                    </div>
+                    <div class="watches">
+                      <img src="images/watches05.webp" alt="watches05">
+                      <p>
+                        <a href="#">
+                          인제니어<br>
+                          <span>7시계</span>
+                        </a>
+                      </p>
+                    </div>
+                    <div class="watches">
+                      <img src="images/watches06.webp" alt="watches06">
+                      <p>
+                        <a href="#">
+                          아쿠아타이머<br>
+                          <span>9시계</span>
+                        </a>
+                      </p>
+                    </div>
+                    <div class="watches">
+                      <img src="images/watches07.webp" alt="watches07">
+                      <p>
+                        <a href="#">
+                          주빌레 컬렉션<br>
+                          <span>29시계</span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+
+                </li>
+              </ul>
+            </li>
             <li><a href="#">포르투기저 2020</a></li>
           </ul>
         </nav>
@@ -133,8 +291,8 @@
         </div>
         <div class="header_icons">
           <ul>
-            <li id="search_btn">
-              <a href="#" onclick="return false;">
+            <li>
+              <a id="search_btn" href="#" onclick="return false;">
                 <img src="images/header_icons_01-1.svg" alt="icon01-1">
                 <img src="images/header_icons_01.svg" alt="icon01">
               </a>
@@ -143,22 +301,6 @@
                 <input type="button" value="검색">
               </form>
             </li>
-            <!-- start search event -->
-            <script>
-              $(function(){
-                $('#search_btn').click(function(){
-                  var tmp=$('.search_form').css('display');
-                  if(tmp=='none'){
-                    $('.search_form').css('display','flex');
-                    $('#search01').focus();
-                  }else if(tmp=='flex'){
-                    $('.search_form').css('display','none');
-                    $('#search01').blur();
-                  }
-                });
-              })
-            </script>
-            <!-- end search event -->
             <li id="login_btn">
               <a href="#" onclick="return false;">
                 <img id="login_open_btn" src="images/header_icons_02-1.svg" alt="icon02-1">
@@ -190,42 +332,6 @@
                 </div>
               </form>
             </li>
-            <!-- start login form event -->
-            <script>
-              $(function(){
-                $('#login_open_btn').click(function(){
-                  $('.login_form').show();
-                  $('#user_id').focus();
-                });
-                $('#login_close_btn').click(function(){
-                  $('.login_form').hide();
-                });
-                $('.iwc_join>ul>li').click(function(){
-                  $('.iwc_join>ul>li').removeClass('active');
-                  $(this).addClass('active');
-                });
-                $('.iwc_join>div>input').focus(function(){
-                  $('.iwc_join>div>input').prev().removeClass('active');
-                  $(this).prev().addClass('active');
-                });
-                $('.iwc_join>div>input').focusout(function(){
-                  $('.iwc_join>div>input').prev().removeClass('active');
-                })
-                $('input[value="LOG IN"]').click(function(){
-                  var userId=$('#user_id').val();
-                  console.log(userId);
-                  var userPass=$('#user_pass').val();
-                  console.log(userPass);
-                  if(userId=='' || userPass==''){
-                    $('.iwc_join>div>input').css('border-bottom-color','red');
-                    $('.iwc_join>div>label').css('color','red');
-                    $('.iwc_join>div').addClass('active');
-                    $('#user_id').focus();
-                  }                  
-                });
-              })
-            </script>
-            <!-- end login form event -->
             <li>
               <a href="#">
                 <img src="images/header_icons_03-1.svg" alt="icon03-1">
@@ -237,8 +343,8 @@
                 세로선
               </a>
             </li>
-            <li id="lang_btn">
-              <a href="#" onclick="return false;">
+            <li>
+              <a id="lang_btn" href="#" onclick="return false;">
                 KR
                 <span class="rotate_sim">^</span>
               </a>
@@ -282,25 +388,8 @@
                   </ul>
                 </div>
               </div>
-              <!-- start lang box event -->
-              <script>
-                $(function(){
-                  $('.lang_container>h4').click(function(){
-                    $(this).next().slideToggle(100);
-                  });
-                  $('.lang_container>ul>li').click(function(){
-                    var natLang=$(this).children().text();
-                    $(this).parent().prev().text(natLang);
-                    $(this).parent().slideUp(100);
-                  });
-                  $('#lang_btn').click(function(){
-                    $('.lang_box').toggle();
-                    $('.rotate_sim').toggleClass('active');
-                  });
-                })
-              </script>
-              <!-- end lang box event -->
             </li>
+
           </ul>
         </div>
       </div>
