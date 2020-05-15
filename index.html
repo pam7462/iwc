@@ -55,12 +55,14 @@
       });
 
       $(window).resize(function(){
-        watchePaddingTop();
-        fsubwatcheBottom();
+        var subwatcheBottom=$('.subwatche').css('bottom');
+        if(subwatcheBottom!='80px'){
+          watchePaddingTop();
+          fsubwatcheBottom();
+        }
       });
 
       $('#clock_btn').click(function(){
-        
         // console.log(submenuHeight);
         var subwatcheBottom=$('.subwatche').css('bottom');
         // console.log(submenuBottom);
@@ -319,7 +321,59 @@
                       </div>
                     </li>
                     <li>
-
+                      <ul class="watche_list">
+                        <li>
+                          <p>나의 IWC 모델 찾아보기</p>
+                          <p>
+                            <a href="#">타임피스 전체 보기</a>
+                          </p>
+                          <p>
+                            <a href="#">리미티드 에디션</a>
+                          </p>
+                          <p>
+                            <a href="#">신제품 시계</a>
+                          </p>
+                        </li>
+                        <li>
+                          <p>시계 특징</p>
+                          <p>
+                            <a href="#">블루 다이얼</a>
+                          </p>
+                          <p>
+                            <a href="#">레더 스트랩</a>
+                          </p>
+                          <p>
+                            <a href="#">골드 케이스</a>
+                          </p>
+                          <p>
+                            <a href="#">필터 모두 보기</a>
+                          </p>
+                        </li>
+                        <li>
+                          <p>사이즈별 보기</p>
+                          <p>
+                            <a href="#">44+ MM</a>
+                          </p>
+                          <p>
+                            <a href="#">40-43+ MM</a>
+                          </p>
+                          <p>
+                            <a href="#">34-39+ MM</a>
+                          </p>
+                        </li>
+                        <li>
+                          <p>컴플리케이션별 보기</p>
+                          <p>
+                            <a href="#">퍼페추얼 캘린더</a>
+                          </p>
+                          <p>
+                            <a href="#">더블 크로느그래프 / 라트라팡트</a>
+                          </p>
+                          <p>
+                            <a href="#">문 페이즈 디스플레이</a>
+                          </p>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </div>

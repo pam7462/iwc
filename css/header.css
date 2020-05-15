@@ -149,6 +149,19 @@
 .watches:hover p span{
   color:#b19c5e;
 }
+.watche_list{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-between;
+}
+.watche_list p{
+  padding:6px 0;
+}
+.watche_list p:first-child{
+  padding-bottom:20px;
+  font-size:14px;
+}
+
 
 
 @media (max-width:767px){
