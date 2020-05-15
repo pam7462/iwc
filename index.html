@@ -19,147 +19,16 @@
   <!-- jQuery   -->
   <script src="js/jquery-3.5.0.min.js"></script>
   <title>스위스 럭셔리 시계 | IWC 샤프하우젠</title>
-  
-  <script src="js/skip.js"></script>
-
+  <!-- 리셋 -->
   <link rel="stylesheet" href="css/reset.css">
+  <!-- IWC베이직 -->
   <link rel="stylesheet" href="css/iwc_basic.css">
+  <!-- 스킵메뉴 -->
   <link rel="stylesheet" href="css/skip.css">
+  <script src="js/skip.js"></script>
+  <!-- 헤더 -->
   <link rel="stylesheet" href="css/header.css">
-  
-  <!-- start submenu event -->
-  <script>
-    $(function(){
-      $('#submenu_btn').click(function(){
-        var submenuHeight=$('.submenu').height();
-        // console.log(submenuHeight);
-        var submenuBottom=$('.submenu').css('bottom');
-        // console.log(submenuBottom);
-        if(submenuBottom=='80px'){
-          $('.submenu').css('bottom','-'+submenuHeight+'px');
-        }else{
-          $('.submenu').css('bottom','100%');
-        }
-      });
-    })
-  </script>
-  <!-- end submenu event -->
-
-  <!-- start subwatche event -->
-  <script>
-    $(function(){
-      watchePaddingTop();
-
-      $('#clock_btn').click(function(){
-        watchePaddingTop();
-      });
-
-      $(window).resize(function(){
-        var subwatcheBottom=$('.subwatche').css('bottom');
-        if(subwatcheBottom!='80px'){
-          watchePaddingTop();
-          fsubwatcheBottom();
-        }
-      });
-
-      $('#clock_btn').click(function(){
-        // console.log(submenuHeight);
-        var subwatcheBottom=$('.subwatche').css('bottom');
-        // console.log(submenuBottom);
-        if(subwatcheBottom=='80px'){
-          fsubwatcheBottom();
-        }else{
-          $('.subwatche').css('bottom','100%');
-        }
-      });
-      function fsubwatcheBottom(){
-        var subwatcheHeight=$('.subwatche').height();
-        $('.subwatche').css('bottom','-'+subwatcheHeight+'px');
-      }
-      function watchePaddingTop(){
-        var watchesWidth=$('.watches').width();
-        // console.log(watchesWidth);
-        $('.watches').css('padding-top',watchesWidth*1.5+'px');
-      }
-
-    })
-  </script>
-  <!-- end subwatche event -->
-  
-  <!-- start search event -->
-  <script>
-    $(function(){
-      $('#search_btn').click(function(){
-        var tmp=$('.search_form').css('display');
-        if(tmp=='none'){
-          $('.search_form').css('display','flex');
-          $('#search01').focus();
-        }else if(tmp=='flex'){
-          $('.search_form').css('display','none');
-          $('#search01').blur();
-        }
-      });
-    })
-  </script>
-  <!-- end search event -->
- 
-  <!-- start login form event -->
-  <script>
-    $(function(){
-      $('#login_open_btn').click(function(){
-        $('.login_form').show();
-        $('#user_id').focus();
-      });
-      $('#login_close_btn').click(function(){
-        $('.login_form').hide();
-      });
-      $('.iwc_join>ul>li').click(function(){
-        $('.iwc_join>ul>li').removeClass('active');
-        $(this).addClass('active');
-      });
-      $('.iwc_join>div>input').focus(function(){
-        $('.iwc_join>div>input').prev().removeClass('active');
-        $(this).prev().addClass('active');
-      });
-      $('.iwc_join>div>input').focusout(function(){
-        $('.iwc_join>div>input').prev().removeClass('active');
-      })
-      $('input[value="LOG IN"]').click(function(){
-        var userId=$('#user_id').val();
-        console.log(userId);
-        var userPass=$('#user_pass').val();
-        console.log(userPass);
-        if(userId=='' || userPass==''){
-          $('.iwc_join>div>input').css('border-bottom-color','red');
-          $('.iwc_join>div>label').css('color','red');
-          $('.iwc_join>div').addClass('active');
-          $('#user_id').focus();
-        }                  
-      });
-    })
-  </script>
-  <!-- end login form event -->
-
-  <!-- start lang box event -->
-  <script>
-    $(function(){
-      $('.lang_container>h4').click(function(){
-        $(this).next().slideToggle(100);
-      });
-      $('.lang_container>ul>li').click(function(){
-        var natLang=$(this).children().text();
-        $(this).parent().prev().text(natLang);
-        $(this).parent().slideUp(100);
-      });
-      $('#lang_btn').click(function(){
-        $('.lang_box').toggle();
-        $('.rotate_sim').toggleClass('active');
-      });
-    })
-  </script>
-  <!-- end lang box event -->
-  
-
+  <script src="js/header.js"></script>
   
 </head>
 <body>
@@ -379,7 +248,9 @@
                 </div>
               </div>                 
             </li>
-            <li><a href="#">포르투기저 2020</a></li>
+            <li>
+              <a href="#">포르투기저 2020</a>
+            </li>
           </ul>
         </nav>
         <div class="logo">
