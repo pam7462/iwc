@@ -45,6 +45,45 @@
   </script>
   <!-- end submenu event -->
 
+  <!-- start subwatche event -->
+  <script>
+    $(function(){
+      watchePaddingTop();
+
+      $('#clock_btn').click(function(){
+        watchePaddingTop();
+      });
+
+      $(window).resize(function(){
+        watchePaddingTop();
+        fsubwatcheBottom();
+      });
+
+      $('#clock_btn').click(function(){
+        
+        // console.log(submenuHeight);
+        var subwatcheBottom=$('.subwatche').css('bottom');
+        // console.log(submenuBottom);
+        if(subwatcheBottom=='80px'){
+          fsubwatcheBottom();
+        }else{
+          $('.subwatche').css('bottom','100%');
+        }
+      });
+      function fsubwatcheBottom(){
+        var subwatcheHeight=$('.subwatche').height();
+        $('.subwatche').css('bottom','-'+subwatcheHeight+'px');
+      }
+      function watchePaddingTop(){
+        var watchesWidth=$('.watches').width();
+        // console.log(watchesWidth);
+        $('.watches').css('padding-top',watchesWidth*1.5+'px');
+      }
+
+    })
+  </script>
+  <!-- end subwatche event -->
+  
   <!-- start search event -->
   <script>
     $(function(){
@@ -118,6 +157,7 @@
   </script>
   <!-- end lang box event -->
   
+
   
 </head>
 <body>

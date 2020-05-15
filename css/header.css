@@ -20,7 +20,7 @@
 .nav>ul>li>a{
   font-size:16px;
 }
-.nav .submenu{
+.submenu,.subwatche{
   position:absolute;
   left:0;
   bottom:100%;
@@ -106,12 +106,6 @@
   font-weight:bold;
 }
 
-.subwatche{
-  position:absolute;
-  left:0;
-  top:100%;
-  width:100%;
-}
 .subwatche_list>li{
   border-top:4px solid #000000;
   padding:20px 0;
@@ -132,7 +126,7 @@
 }
 .watches{
   width:12%;
-  padding-top:10vw;
+  padding-top:1000px;
   position: relative;
 }
 .watches img{
