@@ -20,3 +20,7 @@ body{
   max-width:940px;
   margin:0 auto;
 }
+
+.section,article{
+  margin-bottom:40px;
+}

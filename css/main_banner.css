@@ -2,9 +2,15 @@
 
 .swiper-slide{
   position:relative;
+  height:360px;
+  overflow:hidden;
 }
 .swiper-slide>img{
-  width:100%;
+  position: absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+  width:1280px;
 }
 .swiper_slide_content{
   position: absolute;
@@ -40,4 +46,25 @@
 }
 .swiper_slide_content>.button_box>a:last-child:hover{
   background-color:#000000;
+}
+
+@media (max-width:767px){
+  .swiper-slide{
+    height:460px;
+  }
+  .swiper-slide>img{
+    top:50%;
+    transform:translate(-50%,-50%);
+  }
+  .swiper_slide_content{
+    display:none;
+  }
+}
+@media (max-width:639px){
+  .swiper-slide{
+    height:80vw;
+  }
+  .swiper-slide>img{
+    height:100%;
+  }
 }
