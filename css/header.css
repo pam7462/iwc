@@ -341,8 +341,9 @@
 }
 .lang_box{
   position: absolute;
-  right:0;
-  top:100%;
+  right:40px;
+  top:60%;
+  z-index:10;
   width:300px; 
   display:none; 
 }
