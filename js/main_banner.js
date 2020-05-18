@@ -5,5 +5,10 @@ $(function(){
     autoplay: {
       delay: 3000,
     },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable:true,
+    },
   })
 })
