@@ -4,7 +4,12 @@
   position: fixed;
   right:0;
   top:80%;
-  z-index:10;  
+  z-index:10;
+  opacity:0;  
+  transition:0.3s;
+}
+#link_top.active{
+  opacity:1;
 }
 #link_top>a{
   padding:20px;
