@@ -101,9 +101,6 @@
 .submenu_txt>p>a{
   transition:0.2s;
 }
-.submenu_txt>p>a:hover{
-  color:#b19c5e;
-}
 .txt_bold{
   font-weight:bold;
 }
@@ -317,10 +314,6 @@
   text-align:center;
   margin:20px 0;
 }
-.iwc_join>p>a:hover{
-  color:#b19c5e;
-  text-decoration:underline;
-}
 .iwc_join>input{
   display:block;
   margin:20px auto;
@@ -445,9 +438,6 @@
   .coll_tit p a{
     color:#999999;
     transition:0.2s;
-  }
-  .coll_tit p a:hover{
-    color:#b19c5e;
   }
   .coll_content{
     flex-flow:row wrap;

@@ -30,9 +30,6 @@
 .footer_top select option{
   color:#000000;
 }
-.footer_top p>a:hover{
-  color:#b19c5e;
-}
 
 .footer>.footer_list,.footer>.footer_bottom{
   background-color:#000000;
@@ -57,9 +54,6 @@
 .footer_list>ul>li>p{
   padding:6px 0;
 }
-.footer_list>ul>li>p>a:hover{
-  color:#b19c5e;
-}
 svg{
   width:20px;
   height:20px;
@@ -79,11 +73,9 @@ svg:hover{
 .footer_bottom>ul>li{
   margin-right:20px;
 }
-.footer_bottom>ul>li>a:hover{
+a:hover{
   color:#b19c5e;
 }
-
-
 @media (max-width:767px){
   .footer_top .content2{
     flex-flow:column nowrap;
