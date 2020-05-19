@@ -14,6 +14,7 @@
 }
 .footer_top .content2{
   display:flex;
+  flex-flow:row nowrap;
   padding:20px 0;
 }
 .footer_top .content2>div{
@@ -35,4 +36,10 @@
 
 .footer>.footer_list,.footer>.footer_bottom{
   background-color:#000000;
+}
+
+@media (max-width:767px){
+  .footer_top .content2{
+    flex-flow:column nowrap;
+  }
 }
